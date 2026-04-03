@@ -1,0 +1,24 @@
+/* Custom styles extracted from inline attributes */
+.subjects-toggle{height:67px;padding:0 30px}
+#navbar-vertical{width:calc(100% - 30px);z-index:9}
+.carousel-item{min-height:300px}
+.carousel-item .carousel-img{min-height:300px;object-fit:cover}
+.hero-inner{width:100%;max-width:900px}
+.bg-registration{margin:90px 0}
+/* Keep letter spacing consistent for the small uppercase headings */
+.text-primary.text-uppercase.mb-3{letter-spacing:5px}
+
+/* Minor resets for teacher profile anchors */
+a.text-decoration-none.text-reset{display:block}
+
+/* Custom select height moved from inline style */
+.custom-select.custom-height{height:47px}
+
+/* Reusable class for spaced uppercase headings (replaces inline letter-spacing) */
+.text-spaced{letter-spacing:5px}
+
+/* Hide social icons on teacher cards */
+.team-social{display:none !important}
+
+/* Smooth scroll behavior */
+html{scroll-behavior:smooth}

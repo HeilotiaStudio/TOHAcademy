@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "subjects": "Priekšmeti",
+    "webDev": "Tīmekļa izstrāde",
+    "gameDev": "Spēļu izstrāde",
+    "programmingBasics": "Programmēšanas pamati",
+    "cybersecurity": "Kiberdrošība",
+    "softwareEng": "Programmatūras inženierija",
+    "home": "Sākums",
+    "about": "Par mums",
+    "courses": "Kursi",
+    "teachers": "Pasniedzēji",
+    "blog": "Blogs",
+    "contact": "Kontakti",
+    "joinNow": "Pievienoties"
+  },
+  "topbar": {
+    "office": "Mūsu birojs",
+    "email": "Rakstiet mums",
+    "call": "Zvaniet mums"
+  },
+  "carousel": {
+    "badge": "Labākie tiešsaistes kursi",
+    "slide1": "Labākā izglītība no mājām",
+    "slide2": "Labākā tiešsaistes mācību platforma",
+    "slide3": "Jauns veids, kā mācīties no mājām",
+    "learnMore": "Uzzināt vairāk"
+  },
+  "about": {
+    "badge": "Par mums",
+    "title": "Inovatīvs veids, kā mācīties",
+    "description": "Apgūstiet tīmekļa izstrādi, spēļu dizainu, programmēšanu, kiberdrošību un programmatūras inženieriju savā tempā ar mūsu visaptverošo pašmācības platformu. Piekļūstiet strukturētiem video kursiem, praktiskiem projektiem un interaktīvām apmācībām par HTML, CSS, PHP, React, Node.js, C#, ASP.NET, Unity un citiem. Kad nepieciešams personalizēts atbalsts, rezervējiet pieejamas 1-pret-1 mentoringa sesijas ar pieredzējušiem izstrādātājiem.",
+    "learnMore": "Uzzināt vairāk"
+  },
+  "courses": {
+    "badge": "Kursi",
+    "title": "Mūsu populārākie kursi",
+    "free": "Bezmaksas",
+    "students": "Studenti",
+    "course1": "Tīmekļa izstrāde ar HTML, CSS un PHP",
+    "course2": "Tīmekļa izstrāde ar REACT & Node.js",
+    "course3": "Tīmekļa izstrāde ar C# & ASP.NET",
+    "course4": "Spēļu izstrāde ar Unity",
+    "course5": "Tīmekļa izstrāde ar Python & AI",
+    "course6": "Kiberdrošības pamati AI laikmetā"
+  },
+  "registration": {
+    "badge": "Nepieciešami kursi",
+    "title": "30% atlaide jaunajiem studentiem",
+    "description": "Pievienojieties mūsu mācību kopienai un iegūstiet ekskluzīvu piekļuvi premium kursiem par samazinātu cenu. Sāciet savu ceļojumu tīmekļa izstrādē, spēļu dizainā vai programmatūras inženierijā.",
+    "check1": "Piekļuve visiem kursu materiāliem un resursiem",
+    "check2": "Pieejamas 1-pret-1 mentoringa sesijas",
+    "check3": "Mācieties savā tempā ar mūža piekļuvi",
+    "signUpTitle": "Reģistrēties tagad",
+    "namePlaceholder": "Jūsu vārds",
+    "emailPlaceholder": "Jūsu e-pasts",
+    "selectCourse": "Izvēlieties kursu",
+    "signUpBtn": "Reģistrēties tagad"
+  },
+  "teachers": {
+    "badge": "Pasniedzēji",
+    "title": "Iepazīstieties ar mūsu pasniedzējiem",
+    "teacher1Role": "Izstrādes instruktors",
+    "teacher2Role": "Organizācijas attīstības speciālists"
+  },
+  "testimonial": {
+    "badge": "Atsauksmes",
+    "title": "Ko saka mūsu studenti",
+    "student": "Students"
+  },
+  "blog": {
+    "badge": "Mūsu blogs",
+    "title": "Jaunākais no mūsu bloga",
+    "post1": "Programmēšanas sākums: pirmie soļi",
+    "post2": "Kā efektīvi apgūt tīmekļa izstrādi",
+    "post3": "Kā mēs mācāmies TOH Academy?"
+  },
+  "footer": {
+    "getInTouch": "Sazināties",
+    "ourCourses": "Mūsu kursi",
+    "newsletter": "Jaunumu vēstule",
+    "newsletterText": "Sekojiet līdzi jaunākajām apmācībām, padomiem un nozares ieskatiem. Abonējiet mūsu jaunumu vēstuli un saņemiet ekskluzīvu saturu.",
+    "emailPlaceholder": "Jūsu e-pasta adrese",
+    "signUp": "Abonēt",
+    "allRights": "Visas tiesības aizsargātas.",
+    "privacy": "Privātums un noteikumi",
+    "faqs": "BUJ",
+    "help": "Palīdzība"
+  },
+  "cookie": {
+    "title": "Sīkdatņu piekrišana",
+    "text": "Mēs izmantojam funkcionālās sīkdatnes, lai uzlabotu jūsu pieredzi mūsu vietnē. Noklikšķinot uz \"Pieņemt\", jūs piekrītat šo sīkdatņu izmantošanai.",
+    "accept": "Pieņemt"
+  }
+}

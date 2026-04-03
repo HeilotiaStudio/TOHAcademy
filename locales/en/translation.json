@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "subjects": "Subjects",
+    "webDev": "Web Development",
+    "gameDev": "Game Development",
+    "programmingBasics": "Programming basics",
+    "cybersecurity": "Cybersecurity",
+    "softwareEng": "Software Engineering",
+    "home": "Home",
+    "about": "About",
+    "courses": "Courses",
+    "teachers": "Teachers",
+    "blog": "Blog",
+    "contact": "Contact",
+    "joinNow": "Join Now"
+  },
+  "topbar": {
+    "office": "Our Office",
+    "email": "Email Us",
+    "call": "Call Us"
+  },
+  "carousel": {
+    "badge": "Best Online Courses",
+    "slide1": "Best Education From Your Home",
+    "slide2": "Best Online Learning Platform",
+    "slide3": "New Way To Learn From Home",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Innovative Way To Learn",
+    "description": "Master web development, game design, programming, cybersecurity, and software engineering at your own pace with our comprehensive self-learning platform. Access structured video courses, hands-on projects, and interactive tutorials covering HTML, CSS, PHP, React, Node.js, C#, ASP.NET, Unity, and more. When you need personalized guidance, book affordable 1-on-1 mentoring sessions with experienced developers who provide tailored support to accelerate your learning journey.",
+    "learnMore": "Learn More"
+  },
+  "courses": {
+    "badge": "Courses",
+    "title": "Our Popular Courses",
+    "free": "Free",
+    "students": "Students",
+    "course1": "Web development with HTML, CSS and PHP",
+    "course2": "Web development with REACT & Node.js",
+    "course3": "Web development with C# & ASP.NET",
+    "course4": "Game development with Unity",
+    "course5": "Web Development with Python & AI",
+    "course6": "Cybersecurity Fundamentals in age of AI"
+  },
+  "registration": {
+    "badge": "Need Any Courses",
+    "title": "30% Off For New Students",
+    "description": "Join our learning community and get exclusive access to premium courses at a discounted rate. Start your journey in web development, game design, or software engineering with expert-led content and personalized mentoring support.",
+    "check1": "Access to all course materials and resources",
+    "check2": "Affordable 1-on-1 mentoring sessions available",
+    "check3": "Learn at your own pace with lifetime access",
+    "signUpTitle": "Sign Up Now",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "selectCourse": "Select a course",
+    "signUpBtn": "Sign Up Now"
+  },
+  "teachers": {
+    "badge": "Teachers",
+    "title": "Meet Our Teachers",
+    "teacher1Role": "Development Instructor",
+    "teacher2Role": "Organizational Development Specialist"
+  },
+  "testimonial": {
+    "badge": "Testimonial",
+    "title": "What Our Students Say",
+    "student": "Student"
+  },
+  "blog": {
+    "badge": "Our Blog",
+    "title": "Latest From Our Blog",
+    "post1": "Getting Started with Programming: First Steps",
+    "post2": "How to Learn Web Development Efficiently",
+    "post3": "How do we learn here at TOH Academy?"
+  },
+  "footer": {
+    "getInTouch": "Get In Touch",
+    "ourCourses": "Our Courses",
+    "newsletter": "Newsletter",
+    "newsletterText": "Stay updated with the latest tutorials, tips, and industry insights. Subscribe to our newsletter and receive exclusive content, course updates, and special offers directly to your inbox.",
+    "emailPlaceholder": "Your Email Address",
+    "signUp": "Sign Up",
+    "allRights": "All Rights Reserved.",
+    "privacy": "Privacy & Terms",
+    "faqs": "FAQs",
+    "help": "Help"
+  },
+  "cookie": {
+    "title": "Cookie Consent",
+    "text": "We use functional cookies to improve your experience on our website. By clicking \"Accept\", you consent to the use of these cookies.",
+    "accept": "Accept"
+  }
+}
