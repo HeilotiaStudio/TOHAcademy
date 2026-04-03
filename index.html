@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TOH Academy - Online Courses</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Unity learning, game development courses, self-paced learning, mentor support, Unity tutorials. web development, HTML, CSS, JavaScript" name="keywords">
+    <meta content="Master Unity game development through self-paced courses with hands-on projects and expert mentor support" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- i18next -->
+    <script src="https://unpkg.com/i18next@23.11.5/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@2.5.2/i18nextHttpBackend.min.js"></script>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <!-- VAPID Public Key for Push Notifications -->
+    <meta name="vapid-public-key" content="BPsGbP0ag4TUx2CUUm81mUj3k7pN7oU95Pdn0vqd7zAXyt-SN4wIDmDFLdpXB_y4u-zS9qpxphxYNtOw3cBfk68">
+</head>
+
+<body>
+   
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+            <div class="col-lg-3">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0"><span class="text-primary">TOH</span> ACADEMY</h1>
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1" data-i18n="topbar.office">Our Office</h6>
+                        <small>123 Street, Vecmilgrāvis, Latvia</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1" data-i18n="topbar.email">Email Us</h6>
+                        <small>heilotiastudio@gmail.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1" data-i18n="topbar.call">Call Us</h6>
+                        <small>+371 2046 7759</small>
+                    </div>
+                    <div class="ml-4">
+                        <span id="btn-en" class="btn btn-sm btn-outline-primary" onclick="switchLang('en')">EN</span>
+                        <span id="btn-lv" class="btn btn-sm btn-outline-primary ml-1" onclick="switchLang('lv')">LV</span>
+                    </div>
+                    <div class="ml-4">
+                            <a class="btn btn-primary py-2 px-4 d-none d-lg-block" href="backend/register.html" data-i18n="nav.joinNow">Join Now</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none subjects-toggle" data-toggle="collapse" href="#navbar-vertical">
+                    <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i><span data-i18n="nav.subjects">Subjects</span></h5>
+                    <i class="fa fa-angle-down text-primary"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown"><span data-i18n="nav.webDev">Web Development</span> <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="/web_html_php/intro_html_css_php.html" class="dropdown-item">HTML, CSS, PHP</a>
+                                <a href="/web_react_node/intro_react_node.html" class="dropdown-item">REACT + Node.js</a>
+                                <a href="/c_asp.net/intro_c_asp.html" class="dropdown-item">C# + ASP.NET</a>
+                            </div>
+                        </div>
+                        <a href="/unity/intro.html" class="nav-item nav-link" data-i18n="nav.gameDev">Game Development</a>
+                        <a href="/programming_basics/intro_basics.html" class="nav-item nav-link" data-i18n="nav.programmingBasics">Programming basics</a>
+                        <a href="/cybersecurity/cybersecurity_intro.html" class="nav-item nav-link" data-i18n="nav.cybersecurity">Cybersecurity</a>
+                        <a href="/software/software_intro.html" class="nav-item nav-link" data-i18n="nav.softwareEng">Software Engineering</a>
+                        
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" title="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav py-0">
+                            <a href="#home" class="nav-item nav-link active" data-i18n="nav.home">Home</a>
+                            <a href="#about" class="nav-item nav-link" data-i18n="nav.about">About</a>
+                            <a href="#courses" class="nav-item nav-link" data-i18n="nav.courses">Courses</a>
+                            <a href="#teachers" class="nav-item nav-link" data-i18n="nav.teachers">Teachers</a>
+                            <a href="blog.html" class="nav-item nav-link" data-i18n="nav.blog">Blog</a>
+                            <a href="contact.html" class="nav-item nav-link" data-i18n="nav.contact">Contact</a> 
+                        </div>
+                            
+                        </div>
+                       
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div id="home" class="container-fluid p-0 pb-5 mb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="position-relative w-100 carousel-img" src="img/carousel-1.jpg" alt="Best Education From Your Home">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5 hero-inner">
+                            <h5 class="text-white text-uppercase mb-md-3" data-i18n="carousel.badge">Best Online Courses</h5>
+                            <h1 class="display-3 text-white mb-md-4" data-i18n="carousel.slide1">Best Education From Your Home</h1>
+                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" data-i18n="carousel.learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="position-relative w-100 carousel-img" src="img/carousel-2.jpg" alt="Best Online Learning Platform">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5 hero-inner">
+                            <h5 class="text-white text-uppercase mb-md-3" data-i18n="carousel.badge">Best Online Courses</h5>
+                            <h1 class="display-3 text-white mb-md-4" data-i18n="carousel.slide2">Best Online Learning Platform</h1>
+                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" data-i18n="carousel.learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="position-relative w-100 carousel-img" src="img/carousel-3.jpg" alt="New Way To Learn From Home">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5 hero-inner">
+                            <h5 class="text-white text-uppercase mb-md-3" data-i18n="carousel.badge">Best Online Courses</h5>
+                            <h1 class="display-3 text-white mb-md-4" data-i18n="carousel.slide3">New Way To Learn From Home</h1>
+                            <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" data-i18n="carousel.learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div id="about" class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="img/about.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <div class="text-left mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" data-i18n="about.badge">About Us</h5>
+                        <h1 data-i18n="about.title">Innovative Way To Learn</h1>
+                    </div>
+                    <p data-i18n="about.description">Master web development, game design, programming, cybersecurity, and software engineering at your own pace with our comprehensive self-learning platform.</p>
+                    <a href="" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2" data-i18n="about.learnMore">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Courses Start -->
+    <div id="courses" class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" data-i18n="courses.badge">Courses</h5>
+                <h1 data-i18n="courses.title">Our Popular Courses</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/html/19.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>5 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="web_html_php/intro_html_css_php.html" data-i18n="courses.course1">Web development with HTML, CSS and PHP</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5<small>(50)</small></h6>
+                                    <h5 class="m-0">Free</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/html/3.jpg" alt="bilde2">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>3 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="web_react_node/intro_react_node.html" data-i18n="courses.course2">Web development with REACT & Node.js</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.7 <small>(2)</small></h6>
+                                    <h5 class="m-0">Free</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/C_project.png" alt="C_project.png">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>8 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>3h</small>
+                            </div>
+                            <a class="h5" href="c_asp.net/intro_c_asp.html" data-i18n="courses.course3">Web development with C# & ASP.NET</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5<small>(2)</small></h6>
+                                    <h5 class="m-0">Free</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/GAME_DEV.png" alt="img/GAME_DEV.png">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>15 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="unity/intro.html" data-i18n="courses.course4">Game development with Unity</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5<small>(10)</small></h6>
+                                    <h5 class="m-0">Free</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/Python_web + AI.png" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>12 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>3h</small>
+                            </div>
+                            <a class="h5" href="python/intro_python.html" data-i18n="courses.course5">Web Development with Python & AI</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.7 <small>(9)</small></h6>
+                                    <h5 class="m-0">Free</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="img/CYBERSECURITY.png" alt="CYBERSECURITY.png">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>7 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="cybersecurity/cybersecurity_intro.html" data-i18n="courses.course6">Cybersecurity Fundamentals in age of AI</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(4)</small></h6>
+                                    <h5 class="m-0">Free</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" data-i18n="registration.badge">Need Any Courses</h5>
+                        <h1 class="text-white" data-i18n="registration.title">30% Off For New Students</h1>
+                    </div>
+                    <p class="text-white" data-i18n="registration.description">Join our learning community and get exclusive access to premium courses at a discounted rate.</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i><span data-i18n="registration.check1">Access to all course materials and resources</span></li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i><span data-i18n="registration.check2">Affordable 1-on-1 mentoring sessions available</span></li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i><span data-i18n="registration.check3">Learn at your own pace with lifetime access</span></li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-light text-center p-4">
+                            <h1 class="m-0" data-i18n="registration.signUpTitle">Sign Up Now</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-primary p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" placeholder="Your name" data-i18n-placeholder="registration.namePlaceholder" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 p-4" placeholder="Your email" data-i18n-placeholder="registration.emailPlaceholder" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select border-0 px-4 custom-height" aria-label="Select a course">
+                                        <option selected data-i18n="registration.selectCourse">Select a course</option>
+                                        <option value="1">Web Development</option>
+                                        <option value="2">Game Development</option>
+                                        <option value="3">Cybersecurity</option>
+                                        <option value="4">Software Engineering</option>
+                                        <option value="5">Programming Basics</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit" data-i18n="registration.signUpBtn">Sign Up Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+
+    <!-- Team Start -->
+    <div id="teachers" class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" data-i18n="teachers.badge">Teachers</h5>
+                <h1 data-i18n="teachers.title">Meet Our Teachers</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 text-center team mb-4">
+                    <a href="teacher1.html" class="text-decoration-none text-reset">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/me.jpeg" alt="my image">
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Aivars Kļaviņš</h5>
+                            <p class="m-0" data-i18n="teachers.teacher1Role">Developer & Instructor web & software</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center team mb-4">
+                    <a href="teacher2.html" class="text-decoration-none text-reset">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/zane.png" alt="Zane Ābele">
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Zane Ābele</h5>
+                            <p class="m-0" data-i18n="teachers.teacher2Role">Organizational Development Specialist</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+               <!-- <div class="col-md-6 col-lg-4 text-center team mb-4">
+                    <a href="teacher3.html" class="text-decoration-none text-reset">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>Jhon Doe</h5>
+                            <p class="m-0">Web Designer</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                  -->
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" data-i18n="testimonial.badge">Testimonial</h5>
+                <h1 data-i18n="testimonial.title">What Our Students Say</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-normal mb-4">Exceptional instruction and support</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/team-3.jpg" alt="">
+                            <h5 class="m-0">Mia T</h5>
+                            <span>Student</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-normal mb-4">Great experience and very helpful instructors</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-4.jpg" alt="">
+                            <h5 class="m-0">Richard</h5>
+                            <span>Student</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-normal mb-4">Hands on learning experience with custom projects is why this is different than the rest of it</h4>
+                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" alt="">
+                            <h5 class="m-0">Maya S.</h5>
+                            <span>Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;" data-i18n="blog.badge">Our Blog</h5>
+                <h1 data-i18n="blog.title">Latest From Our Blog</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/blog-1.jpg" alt="">
+                        <a class="blog-overlay text-decoration-none" href="single.html?id=1">
+                            <h5 class="text-white mb-3" data-i18n="blog.post1">Getting Started with Programming: First Steps</h5>
+                            <p class="text-primary m-0">Feb 12, 2026</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/blog-2.jpg" alt="">
+                        <a class="blog-overlay text-decoration-none" href="single.html?id=2">
+                            <h5 class="text-white mb-3" data-i18n="blog.post2">How to Learn Web Development Efficiently</h5>
+                            <p class="text-primary m-0">Feb 12, 2026</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/2.png" alt="">
+                        <a class="blog-overlay text-decoration-none" href="single.html?id=3">
+                            <h5 class="text-white mb-3" data-i18n="blog.post3">How do we learn here at TOH Academy?</h5>
+                            <p class="text-primary m-0">Feb 12, 2026</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;" data-i18n="footer.getInTouch">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, Vecmilgrāvis, Latvia</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+371 2046 7759</p>
+                        <p><i class="fa fa-envelope mr-2"></i>heilotiastudio@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                           <!-- <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>-->
+                            <a class="btn btn-outline-light btn-square mr-2" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-square mr-2" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-square" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;" data-i18n="footer.ourCourses">Our Courses</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="web_html_php/intro.html"><i class="fa fa-angle-right mr-2"></i>Web Development (HTML, CSS, PHP)</a>
+                            <a class="text-white mb-2" href="web_react_node/intro.html"><i class="fa fa-angle-right mr-2"></i>Web development (REACT + Node.js)</a>
+                            <a class="text-white mb-2" href="unity/intro.html"><i class="fa fa-angle-right mr-2"></i>Game development</a>
+                            <a class="text-white mb-2" href="software/software_intro.html"><i class="fa fa-angle-right mr-2"></i>Software Engineering</a>
+                            <a class="text-white" href="cybersecurity/cybersecurity_intro.html"><i class="fa fa-angle-right mr-2"></i>Cybersecurity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 mb-5">
+                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;" data-i18n="footer.newsletter">Newsletter</h5>
+                <p data-i18n="footer.newsletterText">Stay updated with the latest tutorials, tips, and industry insights.</p>
+                <div class="w-100">
+                    <div class="input-group">
+                        <input type="email" id="newsletterEmail" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address" data-i18n-placeholder="footer.emailPlaceholder">
+                        <div class="input-group-append">
+                            <button id="newsletterBtn" class="btn btn-primary px-4" type="button" data-i18n="footer.signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0" style="color: #888;">&copy; <a href="#" style="color: #FF6600;">TOH Academy</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com" style="color: #888;">HTML Codex</a></p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="terms.html" data-i18n="footer.privacy">Privacy & Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="faq.html" data-i18n="footer.faqs">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="contact.html" data-i18n="footer.help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Cookie Consent Modal -->
+    <div id="cookieModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center;">
+        <div style="background:#fff;padding:30px;border-radius:8px;max-width:500px;margin:20px;text-align:center;">
+            <h3 style="margin-bottom:15px;" data-i18n="cookie.title">Cookie Consent</h3>
+            <p style="margin-bottom:20px;" data-i18n="cookie.text">We use functional cookies to improve your experience on our website.</p>
+            <button id="acceptCookies" class="btn btn-primary px-4 py-2" data-i18n="cookie.accept">Accept</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#home" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script src="js/push-subscription.js"></script>
+
+    <!-- i18next init -->
+    <script>
+        const savedLang = localStorage.getItem('lang') || 'en';
+
+        i18next.use(i18nextHttpBackend).init({
+            lng: savedLang,
+            fallbackLng: 'en',
+            backend: {
+                loadPath: './locales/{{lng}}/translation.json?v=' + Date.now(),
+                requestOptions: { cache: 'no-cache' }
+            }
+        }, function() {
+            applyTranslations();
+            updateLangButtons(savedLang);
+        });
+
+        i18next.on('languageChanged', () => applyTranslations());
+
+        function applyTranslations() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.textContent = i18next.t(el.getAttribute('data-i18n'));
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                el.placeholder = i18next.t(el.getAttribute('data-i18n-placeholder'));
+            });
+        }
+
+        function switchLang(lang) {
+            localStorage.setItem('lang', lang);
+            i18next.changeLanguage(lang, () => {
+                applyTranslations();
+                updateLangButtons(lang);
+            });
+        }
+
+        function updateLangButtons(lang) {
+            const en = document.getElementById('btn-en');
+            const lv = document.getElementById('btn-lv');
+            if (en) en.classList.toggle('active', lang === 'en');
+            if (lv) lv.classList.toggle('active', lang === 'lv');
+        }
+    </script>
+    
+    <!-- PWA Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW registered:', reg.scope))
+                .catch(err => console.error('SW registration failed:', err));
+        }
+    </script>
+</body>
+
+</html>

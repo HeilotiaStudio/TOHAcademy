@@ -1,0 +1,12 @@
+{
+  "name": "toh-academy",
+  "version": "1.0.0",
+  "description": "TOH Academy Online Learning Platform",
+  "scripts": {
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "web-push": "^3.6.7"
+  }
+}

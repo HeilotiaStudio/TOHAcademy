@@ -1,0 +1,17 @@
+{
+  "name": "TOH Academy",
+  "short_name": "TOH Academy",
+  "description": "Online Learning Platform for Web Development, Game Design, and Programming",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF6600",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "img/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
