@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core mechanics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="building_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-running"></i> Core mechanics</h1>
+                <p class="subtitle">Learn how to implement canvas and set-up UI elements in Unity.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge"><i class="fab fa-unity"></i> Canvas</div>
+                    <div class="tech-badge"><i class="fas fa-code"></i> C#</div>
+                    <div class="tech-badge"><i class="fas fa-keyboard"></i> Images + Text</div>
+                    <div class="tech-badge"><i class="fas fa-gamepad"></i> Game</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-grid">
+            <aside class="sidebar">
+                <h3><i class="fas fa-bars"></i> Navigation</h3>
+                <ul class="nav-list">
+                    <li><a href="../../index.html#home"><i class="fas fa-arrow-left"></i> Back home</a></li>
+                    <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#code"><i class="fas fa-code"></i> Code Example</a></li>
+                    <li><a href="#usage"><i class="fas fa-book"></i> How to Use</a></li>
+                </ul>
+                
+                <h3 class="mt-2"><i class="fas fa-book-open"></i> Course Content</h3>
+                <ul class="nav-list">
+                    <li><a href="intro.html"><i class="fas fa-play-circle"></i> 1. Introduction</a></li>
+                    <li><a href="core_concepts.html"><i class="fas fa-cube"></i> 2. Core Concepts</a></li>
+                    <li><a href="canvas_button.html"><i class="fas fa-cog"></i> 3. UI basics</a></li>
+                    <li><a href="ui_design.html"><i class="fas fa-paint-brush"></i> 4. UI Design</a></li>
+                    <li><a href="game_mechanics.html"><i class="fas fa-gamepad"></i> 5. Game Mechanics</a></li>
+                    <li><a href="core_coding.html"><i class="fas fa-code"></i> 6. Core Programming</a></li>
+                    <li><a href="#"><i class="fas fa-volume-up"></i> 7. Audio Integration</a></li>
+                    <li><a href="#"><i class="fas fa-lightbulb"></i> 8. Physics & Collisions</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> 9. Multiplayer Basics</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> 10. Data Management</a></li>
+                    <li><a href="#"><i class="fas fa-rocket"></i> 11. Optimization</a></li>
+                    <li><a href="#"><i class="fas fa-trophy"></i> 12. Final Project</a></li>
+                    
+                </ul>
+                
+                <h3 class="mt-2"><i class="fas fa-info-circle"></i> Lesson Info</h3>
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>Difficulty:</strong> <span class="access-badge public">Beginner</span></p>
+                        <p><strong>Duration:</strong> 10 minutes</p>
+                        <p><strong>Language:</strong> C#</p>
+                        <p><strong>Category:</strong> Game Mechanics</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="main-content">
+                <!-- Overview Section -->
+                <section id="overview" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h2 class="section-title">Overview</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="summary">
+                                <strong><i class="fas fa-quote-left"></i> Summary:</strong> 
+                                This lesson covers a matching game mechanic in Unity where players click button pairs to find matches.
+                            </div>
+                            
+                            <p>The <strong>MatchingGame</strong> script implements a button-based matching game. Players click two buttons to see if they form a matching pair.</p>
+                            
+                            <div class="grid-2">
+                                <div class="feature">
+                                    <h4><i class="fas fa-mouse-pointer"></i> Button Pairs</h4>
+                                    <p>Manages multiple button pairs for matching game logic</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-check-double"></i> Match Detection</h4>
+                                    <p>Detects when two clicked buttons form a matching pair</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-comment-dots"></i> Visual Feedback</h4>
+                                    <p>Activates feedback objects when pairs are found</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-trophy"></i> Win Condition</h4>
+                                    <p>Shows win object when all pairs are matched</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Code Example Section -->
+                <section id="code" class="section">
+                    <div class="section-header section-header-flex">
+                        <div class="section-header-left">
+                            <div class="section-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h2 class="section-title">Code Example</h2>
+                        </div>
+                        <a href="#" class="help-button">
+                            <i class="fas fa-question-circle"></i> Get Help
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">MatchingGame.cs</div>
+                            <span class="access-badge public">MonoBehaviour</span>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Description:</strong> A matching game script that manages button pairs and detects matches.</p>
+                            
+                            <div class="code-block">
+<pre><code id="codeContent">Loading code...</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Usage Section -->
+                <section id="usage" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h2 class="section-title">How to Use</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h4><i class="fas fa-list-ol"></i> Setup Instructions:</h4>
+                            
+                            <div class="steps-container">
+                                <div class="step-box">
+                                    <h4><i class="fas fa-check"></i> Step 1: Create UI Buttons</h4>
+                                    <p style="color: rgb(57, 56, 56);">Create UI buttons in your Canvas for the matching game pairs.</p>
+                                </div>
+                                
+                                <div class="step-box">
+                                    <h4><i class="fas fa-check"></i> Step 2: Attach Script</h4>
+                                    <p style="color: rgb(57, 56, 56);">Attach the MatchingGame script to a GameObject in your scene.</p>
+                                </div>
+                                
+                                <div class="step-box">
+                                    <h4><i class="fas fa-check"></i> Step 3: Assign Pairs</h4>
+                                    <p style="color: rgb(57, 56, 56);">In the Inspector, assign button pairs and feedback objects for each pair.</p>
+                                </div>
+                                
+                                <div class="step-box">
+                                    <h4><i class="fas fa-check"></i> Step 4: Test</h4>
+                                    <p style="color: rgb(57, 56, 56);">Press Play and click buttons to match pairs and see feedback.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="notes-box">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Important Notes:</h4>
+                                <ul>
+                                    <li style="color: rgb(57, 56, 56);">Each ButtonPair must contain exactly 2 buttons</li>
+                                    <li style="color: rgb(57, 56, 56);">Feedback objects array should match the number of pairs</li>
+                                    <li style="color: rgb(57, 56, 56);">Win object is optional and shown when all pairs are found</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+        // Load code from external file
+        fetch('code/MatchingGame.cs')
+            .then(response => response.text())
+            .then(code => {
+                const codeElement = document.getElementById('codeContent');
+                codeElement.textContent = code;
+            })
+            .catch(error => {
+                document.getElementById('codeContent').textContent = 'Error loading code file.';
+            });
+    </script>
+</body>
+<script src="../js/gethelp.js"></script>
+</html>

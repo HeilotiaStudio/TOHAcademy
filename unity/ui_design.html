@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI basics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="building_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-running"></i> UI Design (Switching scenes)</h1>
+                <p class="subtitle">Learn how to implement canvas and set-up UI elements in Unity.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge"><i class="fab fa-unity"></i> CANVAS</div>
+                    <div class="tech-badge"><i class="fas fa-code"></i> TMP</div>
+                    <div class="tech-badge"><i class="fas fa-keyboard"></i> Images</div>
+                    <div class="tech-badge"><i class="fas fa-gamepad"></i> Matching game</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-grid">
+            <aside class="sidebar">
+                <h3><i class="fas fa-bars"></i> Navigation</h3>
+                <ul class="nav-list">
+                    <li><a href="../../index.html#home"><i class="fas fa-arrow-left"></i> Back home</a></li>
+                    <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
+                    <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#code"><i class="fas fa-code"></i> Code Example</a></li>
+                    <li><a href="#usage"><i class="fas fa-book"></i> How to Use</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;"><i class="fas fa-book-open"></i> Course Content</h3>
+                <ul class="nav-list">
+                    <li><a href="intro.html"><i class="fas fa-play-circle"></i> 1. Introduction</a></li>
+                    <li><a href="core_concepts.html"><i class="fas fa-cube"></i> 2. Core Concepts</a></li>
+                    <li><a href="canvas_button.html"><i class="fas fa-cog"></i> 3. UI basics</a></li>
+                    <li><a href="ui_design.html"><i class="fas fa-paint-brush"></i> 4. UI Design</a></li>
+                    <li><a href="game_mechanics.html"><i class="fas fa-gamepad"></i> 5. Game Mechanics</a></li>
+                    <li><a href="core_coding.html"><i class="fas fa-code"></i> 6. Core Programming</a></li>
+                    <li><a href="#"><i class="fas fa-volume-up"></i> 7. Audio Integration</a></li>
+                    <li><a href="#"><i class="fas fa-lightbulb"></i> 8. Physics & Collisions</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> 9. Multiplayer Basics</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> 10. Data Management</a></li>
+                    <li><a href="#"><i class="fas fa-rocket"></i> 11. Optimization</a></li>
+                    <li><a href="#"><i class="fas fa-trophy"></i> 12. Final Project</a></li>
+                    
+                </ul>
+                
+                <h3 style="margin-top: 2rem;"><i class="fas fa-info-circle"></i> Lesson Info</h3>
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>Difficulty:</strong> <span class="access-badge public">Beginner</span></p>
+                        <p><strong>Duration:</strong> 10 minutes</p>
+                        <p><strong>Language:</strong> C#</p>
+                        <p><strong>Category:</strong> UI Design</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="main-content">
+
+                <section id="video" class="section">
+                    <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="section-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h2 class="section-title">Video material</h2>
+                        </div>
+                        <a href="#" style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <i class="fas fa-question-circle"></i> Get Help
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="summary">
+                                <strong><i class="fas fa-quote-left"></i> Overview:</strong>
+                                Watch how to switch between scenes in Unity using SceneManager.
+                            </div>
+
+                            <div style="margin-top: 2rem;">
+                                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+                                    <iframe
+                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                        src="https://www.youtube.com/embed/rX3J37mnkto?si=OXBG3PCm9HCmCX7w"
+                                        title="UI Design Video"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 1.5rem;">
+                                <h4><i class="fas fa-list"></i> What You'll Learn:</h4>
+                                <ul style="margin-top: 1rem; line-height: 1.8;">
+                                    <li>How to load scenes using SceneManager</li>
+                                    <li>Setting up scene names in the Inspector</li>
+                                    <li>Connecting a button to trigger a scene switch</li>
+                                    <li>Best practices for scene management in Unity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Overview Section -->
+                <section id="overview" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h2 class="section-title">Overview</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="summary">
+                                <strong><i class="fas fa-quote-left"></i> Summary:</strong>
+                                This lesson covers scene switching in Unity using SceneManager, including how to load scenes by name and connect the script to a UI button.
+                            </div>
+
+                            <p>The <strong>SceneSwitcher</strong> script provides a simple way to transition between scenes in Unity. It exposes a public method that can be called directly from a UI Button's onClick event.</p>
+
+                            <div class="grid-2">
+                                <div class="feature">
+                                    <h4><i class="fas fa-map-signs"></i> Scene Name Field</h4>
+                                    <p>Public string field to set the target scene name in the Inspector</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-exchange-alt"></i> Scene Loading</h4>
+                                    <p>Uses SceneManager.LoadScene to transition to the target scene</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-mouse-pointer"></i> Button Compatible</h4>
+                                    <p>Public method can be assigned directly to a UI Button's onClick event</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-feather"></i> Lightweight</h4>
+                                    <p>Minimal script with no dependencies beyond Unity's SceneManagement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Code Example Section -->
+                <section id="code" class="section">
+                    <div class="section-header" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center;">
+                            <div class="section-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h2 class="section-title">Code Example</h2>
+                        </div>
+                        <a href="#" style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <i class="fas fa-question-circle"></i> Get Help
+                        </a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">SceneSwitcher.cs</div>
+                            <span class="access-badge public">MonoBehaviour</span>
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Description:</strong> A script for switching between different scenes in the Unity game.</p>
+                            
+                            <div class="code-block">
+<pre><code id="codeContent">Loading code...</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Usage Section -->
+                <section id="usage" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h2 class="section-title">How to Use</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h4><i class="fas fa-list-ol"></i> Setup Instructions:</h4>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <div class="feature" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-left: 4px solid #667eea; border-radius: 4px;">
+                                    <h4 style="margin-top: 0;"><i class="fas fa-check"></i> Step 1: Add Scenes to Build Settings</h4>
+                                    <p style="color: rgb(57, 56, 56);">Go to File > Build Settings and add all scenes you want to switch between.</p>
+                                </div>
+
+                                <div class="feature" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-left: 4px solid #667eea; border-radius: 4px;">
+                                    <h4 style="margin-top: 0;"><i class="fas fa-check"></i> Step 2: Attach Script</h4>
+                                    <p style="color: rgb(57, 56, 56);">Attach the SceneSwitcher script to any GameObject in your scene.</p>
+                                </div>
+
+                                <div class="feature" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-left: 4px solid #667eea; border-radius: 4px;">
+                                    <h4 style="margin-top: 0;"><i class="fas fa-check"></i> Step 3: Set Target Scene Name</h4>
+                                    <p style="color: rgb(57, 56, 56);">In the Inspector, type the exact name of the target scene into the Target Scene Name field.</p>
+                                </div>
+
+                                <div class="feature" style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-left: 4px solid #667eea; border-radius: 4px;">
+                                    <h4 style="margin-top: 0;"><i class="fas fa-check"></i> Step 4: Connect to Button</h4>
+                                    <p style="color: rgb(57, 56, 56);">Select your UI Button, add an onClick event, drag the SceneSwitcher GameObject in, and choose SwitchToTargetScene.</p>
+                                </div>
+
+                                <div class="feature" style="padding: 1rem; background: #f8f9fa; border-left: 4px solid #667eea; border-radius: 4px;">
+                                    <h4 style="margin-top: 0;"><i class="fas fa-check"></i> Step 5: Test</h4>
+                                    <p style="color: rgb(57, 56, 56);">Press Play and click the button to switch to the target scene.</p>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 2rem; padding: 1rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+                                <h4 style="margin-top: 0;"><i class="fas fa-exclamation-triangle"></i> Important Notes:</h4>
+                                <ul style="margin-bottom: 0;">
+                                    <li style="color: rgb(57, 56, 56);">The scene name must exactly match the name in Build Settings (case-sensitive)</li>
+                                    <li style="color: rgb(57, 56, 56);">Make sure the target scene is added to File > Build Settings before testing</li>
+                                    <li style="color: rgb(57, 56, 56);">You can reuse this script on multiple GameObjects for different scene transitions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+        // Load code from external file
+        fetch('../code/SceneSwitcher.cs')
+            .then(response => response.text())
+            .then(code => {
+                const codeElement = document.getElementById('codeContent');
+                codeElement.textContent = code;
+            })
+            .catch(error => {
+                document.getElementById('codeContent').textContent = 'Error loading code file.';
+            });
+    </script>
+</body>
+<script src="../js/gethelp.js"></script>
+</html>

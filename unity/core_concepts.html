@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Unity learning, game development courses, self-paced learning, mentor support, Unity tutorials. web development, HTML, CSS, JavaScript" name="keywords">
+    <meta content="Master Unity game development through self-paced courses with hands-on projects and expert mentor support" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core concepts in Unity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="building_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-play-circle"></i> Core Concepts</h1>
+                <p class="subtitle">Self-paced Unity courses with hands-on projects and expert mentor support—learn independently while having guidance available whenever you need help.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge"><i class="fas fa-video"></i> Video Tutorial</div>
+                    <div class="tech-badge"><i class="fas fa-image"></i> Visual Guide</div>
+                    <div class="tech-badge"><i class="fas fa-book"></i> Documentation</div>
+                    <div class="tech-badge"><i class="fas fa-graduation-cap"></i> Beginner Friendly</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-grid">
+            <aside class="sidebar">
+                <h3><i class="fas fa-bars"></i> Navigation</h3>
+                <ul class="nav-list">
+                    <li><a href="../../index.html#home"><i class="fas fa-arrow-left"></i> Back home</a></li>
+                    <li><a href="#video" class="active"><i class="fas fa-video"></i> Video Introduction</a></li>
+                    <li><a href="#visual"><i class="fas fa-image"></i> Visual Overview</a></li>
+                    <li><a href="#getting-started"><i class="fas fa-rocket"></i> Getting Started</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;"><i class="fas fa-book-open"></i> Course Content</h3>
+                <ul class="nav-list">
+                    <li><a href="intro.html"><i class="fas fa-play-circle"></i> 1. Introduction</a></li>
+                    <li><a href="core_concepts.html"><i class="fas fa-cube"></i> 2. Core Concepts</a></li>
+                    <li><a href="canvas_button.html"><i class="fas fa-cog"></i> 3. UI basics</a></li>
+                    <li><a href="ui_design.html"><i class="fas fa-paint-brush"></i> 4. UI Design</a></li>
+                    <li><a href="game_mechanics.html"><i class="fas fa-gamepad"></i> 5. Game Mechanics</a></li>
+                    <li><a href="core_coding.html"><i class="fas fa-code"></i> 6. Core Programming</a></li>
+                    <li><a href="#"><i class="fas fa-volume-up"></i> 7. Audio Integration</a></li>
+                    <li><a href="#"><i class="fas fa-lightbulb"></i> 8. Physics & Collisions</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> 9. Multiplayer Basics</a></li>
+                    <li><a href="#"><i class="fas fa-database"></i> 10. Data Management</a></li>
+                    <li><a href="#"><i class="fas fa-rocket"></i> 11. Optimization</a></li>
+                    <li><a href="#"><i class="fas fa-trophy"></i> 12. Final Project</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;"><i class="fas fa-info-circle"></i> Course Info</h3>
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>Duration:</strong> 5 minutes</p>
+                        <p><strong>Level:</strong> <span class="access-badge public">Beginner</span></p>
+                        <p><strong>Format:</strong> Images + Text</p>
+                        <p><strong>Category:</strong> Core Concepts</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="main-content">
+               
+                <!-- Visual Overview Section -->
+                <section id="visual" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h2 class="section-title">Core Concepts Overview</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                             <a href="#" class="btn-get-help" style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            <i class="fas fa-question-circle"></i> Get Help
+                        </a>
+                            <p>These are 5  core concepts in Unity development.</p>
+                            
+                            <div style="margin-top: 2rem; text-align: center;">
+                                <img 
+                                    src="../img/unity_concepts.png" 
+                                    alt="Course Overview Diagram" 
+                                    style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+                                />
+                            </div>
+                            
+                            <div style="margin-top: 1.5rem;">
+                                <h4><i class="fas fa-info-circle"></i> Core Concepts:</h4>
+                                <div class="grid-2" style="margin-top: 1rem;">
+                                    <div class="feature">
+                                        <h4><i class="fas fa-check-circle"></i> Parent - Child Hierarchy</h4>
+                                        <p>This is how Unity organizes objects in the scene.</p>
+                                        <ul>
+                                            <li><strong>Parent:</strong> A parent controls the position, rotation, and scale of its children.</li>
+                                            <li><strong>Child:</strong> Moving a parent moves all children.</li>
+                                            <li><strong>Hierarchy:</strong> Useful for: characters holding weapons, UI layouts, cameras attached to players.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="feature">
+                                        <h4><i class="fas fa-clock"></i> GameObjects & Components</h4>
+                                        <p>Unity’s core architecture.</p>
+                                         <ul>
+                                            <li><strong>GameObjects </strong> = containers</li>
+                                            <li><strong>Components</strong> = behavior (scripts, physics, visuals, audio)</li>
+                                            <li><strong>Everything you see or interact with is built from this system.</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="feature">
+                                        <h4><i class="fas fa-hands-helping"></i> Prefabs</h4>
+                                        <p>Reusable templates for GameObjects.</p>
+                                        <ul>
+                                            <li><strong>Create once → reuse anywhere.</strong></li>
+                                            <li><strong>Perfect for enemies, bullets, UI elements, power-ups.</strong></li>
+                                            <li><strong>Lets you update all copies by editing the prefab.</strong></li>
+                                        </ul>
+                                    </div>
+                                    <div class="feature">
+                                        <h4><i class="fas fa-certificate"></i> Scenes</h4>
+                                        <p>Unity’s way of organizing different parts of your game.</p>
+                                        <ul>
+                                            <li><strong>Each scene is like a level or screen.</strong></li>
+                                            <li><strong>You can load scenes additively or replace the current one.</strong></li>
+                                            <li><strong>Used for menus, levels, cutscenes, etc.</strong></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Getting Started Section -->
+                <section id="getting-started" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h2 class="section-title">Components & Scripts (C# Behavior)</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="summary">
+                                <strong><i class="fas fa-lightbulb"></i> This is where your game logic lives.</strong> 
+                                
+                            </div>
+                            
+                            <div style="margin-top: 2rem;">
+                                <div class="feature" style="margin-bottom: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #7a91f8 0%, #9b63d3 100%); border-radius: 8px; color: white;">
+                                    <h4 style="color: white;"><i class="fas fa-arrow-right"></i> You write C# scripts that become components.</h4>
+                                    <p style="color: rgb(57, 56, 56);"></p>
+                                </div>
+                                
+                                <div class="feature" style="margin-bottom: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 8px; color: white;">
+                                    <h4 style="color: white;"><i class="fas fa-arrow-right"></i> Scripts control movement, health, AI, input, animations, etc.</h4>
+                                    <p style="color: rgb(57, 56, 56);">There are 2 types of scripts in Unity: MonoBehaviour and ScriptableObject. Think of ScriptableObjects as reusable data files.</p>
+                                </div>
+                                
+                                <div class="feature" style="padding: 1.5rem; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 8px; color: white;">
+                                    <h4 style="color: white;"><i class="fas fa-arrow-right"></i> Unity calls built‑in methods like Start(), Update(), and OnCollisionEnter().</h4>
+                                    <p style="color: rgb(57, 56, 56);">These methods are automatically invoked by Unity's engine during the game lifecycle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="../js/gethelp.js"></script>
+</html>

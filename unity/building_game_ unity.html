@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Building System - Unity Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="building_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-cube"></i> 3D Building System</h1>
+                <p class="subtitle">Advanced Unity C# building system for creating, placing, snapping, and managing 3D structures in real-time.</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge"><i class="fab fa-unity"></i> Unity 3D</div>
+                    <div class="tech-badge"><i class="fas fa-vector-square"></i> Mesh Generation</div>
+                    <div class="tech-badge"><i class="fas fa-magnet"></i> Grid Snapping</div>
+                    <div class="tech-badge"><i class="fas fa-save"></i> Save/Load System</div>
+                    <div class="tech-badge"><i class="fas fa-exchange-alt"></i> Multiplayer Ready</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content-grid">
+            <aside class="sidebar">
+                <h3><i class="fas fa-bars"></i> Navigation</h3>
+                <ul class="nav-list">
+                    <li><a href="../../index.html#home"><i class="fas fa-arrow-left"></i> Back home</a></li>
+                    <li><a href="#overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#core"><i class="fas fa-cube"></i> Core Components</a></li>
+                    <li><a href="#placement"><i class="fas fa-mouse-pointer"></i> Placement System</a></li>
+                    <li><a href="#snapping"><i class="fas fa-magnet"></i> Snapping System</a></li>
+                    <li><a href="#examples"><i class="fas fa-code"></i> Code Examples</a></li>
+                    <li><a href="#architecture"><i class="fas fa-sitemap"></i> System Architecture</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 2rem;"><i class="fas fa-info-circle"></i> System Info</h3>
+                <div class="card">
+                    <div class="card-content">
+                        <p><strong>Namespace:</strong> <span class="keyword">BuildingSystem</span></p>
+                        <p><strong>Engine:</strong> Unity 2022.3+</p>
+                        <p><strong>Renderer:</strong> URP/HDRP Compatible</p>
+                        <p><strong>Platform:</strong> <span class="access-badge public">Cross-Platform</span></p>
+                        <p><strong>Category:</strong> Construction & Simulation</p>
+                    </div>
+                </div>
+            </aside>
+            
+            <main class="main-content">
+                <!-- Overview Section -->
+                <section id="overview" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h2 class="section-title">System Overview</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="summary">
+                                <strong><i class="fas fa-quote-left"></i> Summary:</strong> 
+                                Complete 3D building system for Unity featuring grid-based placement, snapping mechanics, undo/redo, saving/loading, and multiplayer synchronization.
+                            </div>
+                            
+                            <p>The <strong>3D Building System</strong> provides everything needed for construction games, architectural tools, or any application requiring dynamic 3D object placement.</p>
+                            
+                            <div class="grid-2">
+                                <div class="feature">
+                                    <h4><i class="fas fa-th"></i> Grid-Based Placement</h4>
+                                    <p>Precision placement with configurable grid sizes (0.25m to 2m increments)</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-magnet"></i> Smart Snapping</h4>
+                                    <p>Automatic alignment to nearby objects, edges, and surfaces</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-undo"></i> Undo/Redo System</h4>
+                                    <p>Full history tracking with keyboard shortcuts (Ctrl+Z, Ctrl+Y)</p>
+                                </div>
+                                <div class="feature">
+                                    <h4><i class="fas fa-save"></i> Save/Load</h4>
+                                    <p>JSON-based serialization for complex building structures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Core Components Section -->
+                <section id="core" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h2 class="section-title">Core Components</h2>
+                    </div>
+                    
+                    <div class="grid-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">BuildingManager</div>
+                                <span class="access-badge public">Singleton</span>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Type:</strong> <span class="class">MonoBehaviour</span></p>
+                                <p>Central controller handling all building operations, UI, and system state.</p>
+                                <div class="method-list">
+                                    <span class="method-tag">PlaceBuilding()</span>
+                                    <span class="method-tag">DeleteBuilding()</span>
+                                    <span class="method-tag">Undo()</span>
+                                    <span class="method-tag">Redo()</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">BuildingPiece</div>
+                                <span class="access-badge public">ScriptableObject</span>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Type:</strong> <span class="class">ScriptableObject</span></p>
+                                <p>Data container for building pieces (prefab, dimensions, materials, cost).</p>
+                                <div class="method-list">
+                                    <span class="property-tag">prefab</span>
+                                    <span class="property-tag">size</span>
+                                    <span class="property-tag">materials</span>
+                                    <span class="property-tag">buildCost</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">BuildPreview</div>
+                                <span class="access-badge public">Component</span>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Type:</strong> <span class="class">MonoBehaviour</span></p>
+                                <p>Visual feedback system for placement preview (green/red validation).</p>
+                                <div class="method-list">
+                                    <span class="method-tag">UpdatePosition()</span>
+                                    <span class="method-tag">SetValid()</span>
+                                    <span class="method-tag">SetInvalid()</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">GridSystem</div>
+                                <span class="access-badge public">Static Class</span>
+                            </div>
+                            <div class="card-content">
+                                <p><strong>Type:</strong> <span class="class">Static Class</span></p>
+                                <p>Mathematical utilities for grid calculations and coordinate transformations.</p>
+                                <div class="method-list">
+                                    <span class="method-tag">WorldToGrid()</span>
+                                    <span class="method-tag">GridToWorld()</span>
+                                    <span class="method-tag">SnapToGrid()</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Placement System Section -->
+                <section id="placement" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h2 class="section-title">Placement System</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <h3>Placement Workflow</h3>
+                            <div class="workflow">
+                                <div class="workflow-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Selection</h4>
+                                        <p>User selects building piece from UI palette or hotkeys</p>
+                                    </div>
+                                </div>
+                                <div class="workflow-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Preview</h4>
+                                        <p>Ghost preview follows mouse cursor with collision checking</p>
+                                    </div>
+                                </div>
+                                <div class="workflow-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Validation</h4>
+                                        <p>System checks for collisions, support, and build permissions</p>
+                                    </div>
+                                </div>
+                                <div class="workflow-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Placement</h4>
+                                        <p>On click, instantiate final building piece with materials</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="code-block" style="margin-top: 2rem;">
+                                <pre><span class="keyword">public class</span> <span class="class">PlacementController</span> : <span class="class">MonoBehaviour</span>
+{
+    <span class="keyword">private</span> <span class="class">BuildPreview</span> currentPreview;
+    <span class="keyword">private</span> <span class="class">BuildingPiece</span> selectedPiece;
+    
+    <span class="keyword">void</span> <span class="method">Update</span>()
+    {
+        <span class="keyword">if</span> (selectedPiece != <span class="keyword">null</span>)
+        {
+            <span class="class">Vector3</span> mousePosition = <span class="method">GetMouseWorldPosition</span>();
+            <span class="class">Vector3</span> gridPosition = <span class="class">GridSystem</span>.<span class="method">SnapToGrid</span>(mousePosition);
+            
+            currentPreview.<span class="method">UpdatePosition</span>(gridPosition);
+            
+            <span class="keyword">bool</span> isValid = <span class="method">CheckPlacementValid</span>(gridPosition);
+            currentPreview.<span class="method">SetValid</span>(isValid);
+            
+            <span class="keyword">if</span> (<span class="class">Input</span>.<span class="method">GetMouseButtonDown</span>(0) && isValid)
+            {
+                <span class="method">PlaceBuilding</span>(gridPosition);
+            }
+        }
+    }
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Code Examples Section -->
+                <section id="examples" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h2 class="section-title">Code Examples</h2>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-content">
+                            <p>Core implementation examples for the building system:</p>
+                            
+                            <!-- Dynamic code examples will be loaded here -->
+                            <div id="building-code-container"></div>
+                            
+                            <!-- Additional static example -->
+                            <div class="code-section">
+                                <h4><i class="fas fa-save"></i> Save System Example</h4>
+                                <div class="code-block">
+<pre><span class="keyword">using</span> System.Collections.Generic;
+<span class="keyword">using</span> UnityEngine;
+
+[<span class="class">System.Serializable</span>]
+<span class="keyword">public class</span> <span class="class">BuildingData</span>
+{
+    <span class="keyword">public string</span> pieceId;
+    <span class="keyword">public</span> <span class="class">Vector3</span> position;
+    <span class="keyword">public</span> <span class="class">Quaternion</span> rotation;
+    <span class="keyword">public</span> <span class="class">Dictionary</span>&lt;<span class="keyword">string</span>, <span class="keyword">string</span>&gt; customData;
+}
+
+<span class="keyword">public class</span> <span class="class">SaveSystem</span> : <span class="class">MonoBehaviour</span>
+{
+    <span class="keyword">public void</span> <span class="method">SaveBuildings</span>(<span class="class">List</span>&lt;<span class="class">Building</span>&gt; buildings)
+    {
+        <span class="class">List</span>&lt;<span class="class">BuildingData</span>&gt; data = <span class="keyword">new</span> <span class="class">List</span>&lt;<span class="class">BuildingData</span>&gt;();
+        
+        <span class="keyword">foreach</span> (<span class="keyword">var</span> building <span class="keyword">in</span> buildings)
+        {
+            data.<span class="method">Add</span>(<span class="keyword">new</span> <span class="class">BuildingData</span>
+            {
+                pieceId = building.PieceId,
+                position = building.<span class="method">Transform</span>.position,
+                rotation = building.<span class="method">Transform</span>.rotation
+            });
+        }
+        
+        <span class="keyword">string</span> json = <span class="class">JsonUtility</span>.<span class="method">ToJson</span>(data);
+        <span class="class">System.IO.File</span>.<span class="method">WriteAllText</span>(<span class="string">"savegame.json"</span>, json);
+        <span class="class">Debug</span>.<span class="method">Log</span>(<span class="string">"Game saved!"</span>);
+    }
+}</pre>
+                                </div>
+                            </div>
+                            
+                            <button class="copy-button" onclick="copyBuildingCode()">
+                                <i class="fas fa-copy"></i> Copy All Building Code
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Architecture Section -->
+                <section id="architecture" class="section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h2 class="section-title">System Architecture</h2>
+                    </div>
+                    
+                    <div class="diagram">
+                        <div style="text-align: center;">
+                            <h3 style="color: #60a5fa; margin-bottom: 2rem;">Building System Architecture</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                                <div class="arch-layer">
+                                    <h4><i class="fas fa-layer-group"></i> Presentation Layer</h4>
+                                    <ul>
+                                        <li>UI Manager</li>
+                                        <li>Build Preview</li>
+                                        <li>Selection Visuals</li>
+                                        <li>Grid Visualization</li>
+                                    </ul>
+                                </div>
+                                <div class="arch-layer">
+                                    <h4><i class="fas fa-cogs"></i> Logic Layer</h4>
+                                    <ul>
+                                        <li>Building Manager</li>
+                                        <li>Placement Controller</li>
+                                        <li>Snapping System</li>
+                                        <li>Validation System</li>
+                                    </ul>
+                                </div>
+                                <div class="arch-layer">
+                                    <h4><i class="fas fa-database"></i> Data Layer</h4>
+                                    <ul>
+                                        <li>Building Pieces DB</li>
+                                        <li>Save/Load System</li>
+                                        <li>Undo/Redo Stack</li>
+                                        <li>Multiplayer Sync</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        
+        <footer>
+            <p><i class="fas fa-cube"></i> 3D Building System Documentation | Unity</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #64748b;">
+                Modular Building System v2.1 | Last updated: <span id="currentDate"></span>
+            </p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
+        
+        // Define building system code files to load
+        const buildingCodeFiles = [
+            {
+                file: 'building_manager.code',
+                title: 'Building Manager (Singleton)', 
+                icon: 'fa-tools',
+                description: 'Main controller managing all building operations and system state'
+            },
+            {
+                file: 'placement_system.code',
+                title: 'Placement System', 
+                icon: 'fa-mouse-pointer',
+                description: 'Handles object placement, preview, and validation logic'
+            },
+            {
+                file: 'snapping_system.code',
+                title: 'Snapping System', 
+                icon: 'fa-magnet',
+                description: 'Grid and object snapping with edge detection'
+            }
+        ];
+        
+        // Load building code examples dynamically
+        async function loadBuildingCodeExamples() {
+            const container = document.getElementById('building-code-container');
+            
+            for (const codeFile of buildingCodeFiles) {
+                try {
+                    const response = await fetch(codeFile.file);
+                    
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${codeFile.file}: ${response.status}`);
+                    }
+                    
+                    const code = await response.text();
+                    
+                    // Create code section
+                    const codeSection = document.createElement('div');
+                    codeSection.className = 'code-section';
+                    codeSection.innerHTML = `
+                        <h4><i class="fas ${codeFile.icon}"></i> ${codeFile.title}</h4>
+                        ${codeFile.description ? `<p class="code-description">${codeFile.description}</p>` : ''}
+                        <div class="code-block">
+                            <pre>${code}</pre>
+                        </div>
+                    `;
+                    
+                    container.appendChild(codeSection);
+                    
+                } catch (error) {
+                    console.error('Error loading building code:', error);
+                    container.innerHTML += `
+                        <div class="error-message">
+                            <i class="fas fa-exclamation-triangle"></i> 
+                            Failed to load ${codeFile.file}: ${error.message}
+                        </div>
+                    `;
+                }
+            }
+        }
+        
+        // Copy all building code function
+        function copyBuildingCode() {
+            let allCode = '';
+            
+            // Get code from loaded examples
+            document.querySelectorAll('#building-code-container .code-block pre').forEach(pre => {
+                allCode += pre.textContent + '\n\n';
+            });
+            
+            // Get static SaveSystem example
+            const saveSystemCode = document.querySelector('#examples .code-section:last-child .code-block pre');
+            if (saveSystemCode) {
+                allCode += saveSystemCode.textContent;
+            }
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(allCode).then(() => {
+                const button = document.querySelector('#examples .copy-button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> All Code Copied!';
+                button.style.background = 'var(--success)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy code:', err);
+                alert('Failed to copy code to clipboard');
+            });
+        }
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-list a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-list a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Load code when page is ready
+        document.addEventListener('DOMContentLoaded', loadBuildingCodeExamples);
+    </script>
+</body>
+</html>
