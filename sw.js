@@ -28,8 +28,8 @@ self.addEventListener('push', event => {
   let notificationData = {
     title: 'TOH Academy',
     body: 'New notification',
-    icon: '/img/favicon.ico',
-    badge: '/img/favicon.ico',
+    icon: '/img/favicon.png',
+    badge: '/img/favicon.png',
     tag: 'toh-notification',
     requireInteraction: true
   };
