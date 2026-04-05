@@ -1,17 +1,15 @@
 {
-  "name": "TOH Academy",
-  "short_name": "TOH Academy",
-  "description": "Online Learning Platform for Web Development, Game Design, and Programming",
-  "start_url": "/index.html",
+  "short_name": "TOH ACADEMY",
+  "name": "TOH Academy is aelf learning platform",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#FF6600",
-  "scope": "/",
+  "start_url": "/MyNFTDemo/?source=pwa",
+  "id": "/TOHAcademy/?source=pwa",
   "icons": [
     {
-      "src": "img/favicon.ico",
+      "src": "/TOHAcademy/favicon.png",
       "sizes": "any",
-      "type": "image/x-icon"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
