@@ -1,17 +1,20 @@
-console.log("MAIN.JS LOADED");
-document.addEventListener("DOMContentLoaded", () => {
-    
-    console.log("Button found:", document.getElementById("notifyBtn"));
 
+console.log("MAIN.JS LOADED");
+
+document.addEventListener("DOMContentLoaded", () => {
 
     const btn = document.getElementById("notifyBtn");
+    console.log("Button found:", btn);
 
     if (!btn) {
         console.warn("notifyBtn not found in DOM");
         return;
     }
 
-    btn.addEventListener("click", async () => {
+    btn.addEventListener("click", async (event) => {
+        event.preventDefault();      // <--- FIX 1
+        event.stopPropagation();     // <--- FIX 2
+
         console.log("Notification button clicked");
 
         if (!("Notification" in window)) {
@@ -39,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
 
 
 
