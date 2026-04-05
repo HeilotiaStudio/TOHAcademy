@@ -1,5 +1,7 @@
+console.log("MAIN.JS LOADED");
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("MAIN.JS LOADED");
+    
+    console.log("Button found:", document.getElementById("notifyBtn"));
 
 
     const btn = document.getElementById("notifyBtn");
