@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("MAIN.JS LOADED");
+
+
     const btn = document.getElementById("notifyBtn");
 
     if (!btn) {
