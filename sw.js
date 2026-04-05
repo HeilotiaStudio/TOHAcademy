@@ -1,10 +1,10 @@
 const CACHE_NAME = 'toh-academy-v2';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/main.js',
-  '/img/carousel-1.jpg'
+  '/TOHAcademy/index.html',
+  '/TOHAcademy/css/style.css',
+  '/TOHAcademy/js/main.js',
+  '/TOHAcademy/img/carousel-1.jpg'
 ];
 
 self.addEventListener('install', event => {
