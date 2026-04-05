@@ -1,6 +1,6 @@
 {
   "short_name": "TOH ACADEMY",
-  "name": "TOH Academy is aelf learning platform",
+  "name": "TOH Academy is self learning platform",
   "display": "standalone",
   "start_url": "/TOHAcademy/?source=pwa",
   "id": "/TOHAcademy/?source=pwa",
