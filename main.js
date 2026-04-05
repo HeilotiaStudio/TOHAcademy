@@ -1,4 +1,3 @@
-
 console.log("MAIN.JS LOADED");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -6,42 +5,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("notifyBtn");
     console.log("Button found:", btn);
 
-    if (!btn) {
-        console.warn("notifyBtn not found in DOM");
-        return;
-    }
+    if (!btn) return;
 
     btn.addEventListener("click", async (event) => {
-        event.preventDefault();      // <--- FIX 1
-        event.stopPropagation();     // <--- FIX 2
+        event.preventDefault();
+        event.stopPropagation();
 
         console.log("Notification button clicked");
 
-        if (!("Notification" in window)) {
-            console.error("Notifications are not supported in this browser.");
-            alert("Notifications are not supported on this device.");
-            return;
-        }
-
-        console.log("Requesting notification permission...");
         const permission = await Notification.requestPermission();
         console.log("Permission result:", permission);
 
         if (permission === "granted") {
-            console.log("Permission granted. Showing test notification...");
-            new Notification("Notifications enabled!", {
-                body: "You will receive alerts from TOH Academy.",
-                icon: "/TOHAcademy/img/favicon.png"
-            });
+            showToast("Notifications enabled!");
         } else if (permission === "denied") {
-            console.warn("Permission denied by user.");
-            alert("You blocked notifications. Enable them in browser settings.");
+            showToast("Notifications blocked in browser settings.");
         } else {
-            console.log("Permission dismissed by user.");
-            alert("Notification permission dismissed.");
+            showToast("Notification permission dismissed.");
         }
     });
 });
+
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.querySelector(".toast-body").textContent = message;
+
+    toast.classList.remove("hidden");
+    setTimeout(() => toast.classList.add("show"), 10);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.classList.add("hidden"), 300);
+    }, 3000);
+}
+
+
 
 
 
