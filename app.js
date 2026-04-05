@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.AddToHomeScreenInstance = window.AddToHomeScreen({
       appName: 'TOH Academy',
       appNameDisplay: 'standalone',
-      appIconUrl: 'favicon.png',
+      appIconUrl: 'img/favicon.png',
       assetUrl: 'https://cdn.jsdelivr.net/gh/philfung/add-to-homescreen@2.91/dist/assets/img/',
       maxModalDisplayCount: 3,
       displayOptions: { showMobile: true, showDesktop: true }
