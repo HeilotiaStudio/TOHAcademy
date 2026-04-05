@@ -2,11 +2,11 @@
   "short_name": "TOH ACADEMY",
   "name": "TOH Academy is aelf learning platform",
   "display": "standalone",
-  "start_url": "/MyNFTDemo/?source=pwa",
+  "start_url": "/TOHAcademy/?source=pwa",
   "id": "/TOHAcademy/?source=pwa",
   "icons": [
     {
-      "src": "/TOHAcademy/favicon.png",
+      "src": "/TOHAcademy/img/favicon.png",
       "sizes": "any",
       "type": "image/png",
       "purpose": "any"
